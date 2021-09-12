@@ -4,13 +4,20 @@ package com.hss.singletonMode.impl;
  * @author lenovo
  * 巧克力工厂
  *
+ * 优化,多线程环境下（时间片问题）,无法保证唯一性
+ * 同步锁(synchronized) getInstance方法
+ *
+ * "急切"创建实例
+ * 双重检查加锁
+ *
  */
 public class ChocolateFactory {
-	//空
-	private boolean empty;
-	//煮沸
-	private boolean boiled;
-	
+//	空
+	private volatile boolean empty;
+//	煮沸
+	private volatile boolean boiled;
+
+//	使用volatile修饰单例对象，防止高并发下，因为指令重排引发问题(地址不为空，地址上没有对象，导致问题)
 	private volatile static ChocolateFactory uniqeInstance = null;
 	
 	private ChocolateFactory() {
@@ -25,6 +32,7 @@ public class ChocolateFactory {
 			synchronized (ChocolateFactory.class) {
 				if(uniqeInstance == null){
 					uniqeInstance = new ChocolateFactory();
+					System.out.println(Thread.currentThread().getName() + "\t Object is init...");
 				}
 			}				
 		}

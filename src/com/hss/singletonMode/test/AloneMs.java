@@ -1,6 +1,7 @@
 package com.hss.singletonMode.test;
 
 import com.hss.singletonMode.impl.ChocolateFactory;
+import com.hss.singletonMode.impl.Singleton;
 
 /**
  * 
@@ -18,33 +19,58 @@ public class AloneMs {
 	
 	public static void main(String[] args) {
 //		经典单例模式代码实例
-	/*	Singleton s1 = Singleton.getInstance();
+//		alOneSingleton();
+
+//		多线程下测试懒汉模式（懒汉模式不能保证多线程）
+//		concurrentSingleton();
+
+//		巧克力工厂(单线程)，因为实际只new了一个对象，所以只能造一个巧克力
+//		alOneChocolateFactory();
+
+//		巧克力工厂(多线程)
+		concurrentChocolateFactory();
 		
-		Singleton s2 = Singleton.getInstance();
-		
-		Singleton s3 = Singleton.getInstance();*/
-//		巧克力工厂
+	}
+
+	private static void concurrentChocolateFactory(){
+		for (int i = 0; i < 50; i++) {
+			new Thread(() ->{
+				ChocolateFactory c = ChocolateFactory.getInstance();
+				c.fill();
+				c.boil();
+				c.drain();
+			},"t" + i).start();
+		}
+	}
+
+	private static void alOneChocolateFactory(){
 		ChocolateFactory c1 = ChocolateFactory.getInstance();
-		
+
 		ChocolateFactory c2 = ChocolateFactory.getInstance();
-		
+
 		c1.fill();
 		c2.fill();
-		
+
 		c1.boil();
 		c2.boil();
-		
+
 		c1.drain();
 		c2.drain();
-		
-//		优化,多线程环境下（时间片问题）,无法保证唯一性
-//		同步锁(synchronized) getInstance方法
-		
-//		"急切"创建实例
-		
-//		双重检查加锁
-		
-		
-		
+	}
+
+	private static void concurrentSingleton(){
+		for (int i = 0; i < 50; i++) {
+			new Thread(() ->{
+				Singleton.getInstance();
+			},"t" + 1).start();
+		}
+	}
+
+	private static void alOneSingleton(){
+		Singleton s1 = Singleton.getInstance();
+
+		Singleton s2 = Singleton.getInstance();
+
+		Singleton s3 = Singleton.getInstance();
 	}
 }
