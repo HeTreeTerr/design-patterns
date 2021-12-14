@@ -15,4 +15,10 @@ com.hss.decoratorMode
 ## 1.5 单例模式
 com.hss.singletonMode
 
+## 1.6 建造者模式
+com.hss.strategyMode
+
+## 1.7 责任链模式
+com.hss.chainOfResponsibilityMode
+
 todo...
