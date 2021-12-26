@@ -1,7 +1,10 @@
 package com.hss.singletonMode.test;
 
-import com.hss.singletonMode.impl.ChocolateFactory;
-import com.hss.singletonMode.impl.Singleton;
+import com.hss.singletonMode.impl.*;
+
+import java.io.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * 
@@ -19,7 +22,9 @@ import com.hss.singletonMode.impl.Singleton;
 public class AloneMs {
 	
 	public static void main(String[] args) {
-//		经典单例模式代码实例
+//		饿汉模式，在启动时就创建实例，暂无测试代码
+
+//		经典懒汉单例模式代码实例
 //		alOneSingleton();
 
 //		多线程下测试懒汉模式（懒汉模式不能保证多线程）
@@ -29,8 +34,84 @@ public class AloneMs {
 //		alOneChocolateFactory();
 
 //		巧克力工厂(多线程)
-		concurrentChocolateFactory();
-		
+//		concurrentChocolateFactory();
+
+//		内部类实现单例模式(多线程)
+//		concurrentLazyInnerClassSingleton();
+
+//		解决反射构造实例，破环单例
+//		reflexSingleton();
+
+//		解决序列化构造实例，破环单例
+//		seriableSingleton();
+
+//		枚举单例
+		enumSingleton();
+	}
+
+	private static void enumSingleton(){
+		for (int i = 0; i < 50; i++) {
+			new Thread(() ->{
+				System.out.println(EnumSingleton.getInstall().getData());
+			},"t" + i).start();
+		}
+	}
+
+	private static void seriableSingleton(){
+		SeriableSingleton s1 = null;
+		SeriableSingleton s2 = SeriableSingleton.getInstall();
+
+		FileOutputStream fos = null;
+
+		try {
+			fos = new FileOutputStream("SeriableSingleton.obj");
+			ObjectOutputStream outputStream = new ObjectOutputStream(fos);
+			outputStream.writeObject(s2);
+			outputStream.flush();
+			outputStream.close();
+
+			FileInputStream fis = new FileInputStream("SeriableSingleton.obj");
+			ObjectInputStream inputStream = new ObjectInputStream(fis);
+			s1 = (SeriableSingleton)inputStream.readObject();
+			inputStream.close();
+
+			System.out.println(s1 == s2);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void reflexSingleton(){
+		try {
+			Class<LazyInnerClassSingleton> aClass = LazyInnerClassSingleton.class;
+			Constructor<LazyInnerClassSingleton> constructor = aClass.getDeclaredConstructor(null);
+			constructor.setAccessible(true);
+
+			LazyInnerClassSingleton o1 = constructor.newInstance();
+			LazyInnerClassSingleton o2 = LazyInnerClassSingleton.getInstance();
+
+			System.out.println(o1 == o2);
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void concurrentLazyInnerClassSingleton(){
+		for (int i = 0; i < 50; i++) {
+			new Thread(() ->{
+				System.out.println(LazyInnerClassSingleton.getInstance());
+			},"t" + i).start();
+		}
 	}
 
 	private static void concurrentChocolateFactory(){
