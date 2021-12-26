@@ -12,7 +12,8 @@ import com.hss.singletonMode.impl.Singleton;
  * 
  * 单例模式：确保一个类最多只有一个实例，并提供一个全局访问点
  * 
- * 经典单例模式代码实例
+ * 饿汉式单例
+ * 懒汉式单例
  *
  */
 public class AloneMs {
