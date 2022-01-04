@@ -8,7 +8,8 @@ com.hss.catcherMode
 
 ## 1.3 抽象工厂模式
 com.hss.abstractFactoryMode  
-抽象工厂模式（Abastract Factory Pattern）是指提供一个创建一系列相关或相互依赖对象的接口，无须指定他们具体的类。
+抽象工厂模式（Abastract Factory Pattern）是指提供一个创建一系列相关或相互依赖对象的接口，无须
+指定他们具体的类。
 属于创建型设计模式。
 
 ## 1.4 装饰者模式
@@ -18,7 +19,12 @@ com.hss.decoratorMode
 com.hss.singletonMode  
 单例模式（Singleton Pattern）是指确保一个类在任何情况下都绝对只有一个实例，并提供一个全局访问点。 
 隐藏其所有的构造方法。
- 属于创建型模式。
+属于创建型模式。  
+单例模式分类：
+* 饿汉式单例
+* 懒汉式单例 
+* 注册式单例
+* ThreadLocal单例
 
 ## 1.6 建造者模式
 com.hss.strategyMode
