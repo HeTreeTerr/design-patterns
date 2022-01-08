@@ -1,7 +1,10 @@
 package com.hss.abstractFactoryMode.test;
 
+import com.hss.abstractFactoryMode.bean.Man;
+import com.hss.abstractFactoryMode.bean.WoMan;
 import com.hss.abstractFactoryMode.dao.Factory;
 import com.hss.abstractFactoryMode.dao.HuMan;
+import com.hss.abstractFactoryMode.impl.HuManFactory;
 import com.hss.abstractFactoryMode.impl.ManFactory;
 import com.hss.abstractFactoryMode.impl.WoManFactory;
 
@@ -15,6 +18,16 @@ import com.hss.abstractFactoryMode.impl.WoManFactory;
 public class AbsFacMs {
 	
 	public static void main(String[] args) {
+//		简单工厂模式
+		/*HuManFactory huManFactory = new HuManFactory();
+		HuMan huMan = huManFactory.creatMan(Man.class);
+		huMan.distory();
+
+		HuMan huWoman = huManFactory.creatMan(WoMan.class);
+		huWoman.distory();*/
+
+
+//		工厂方法模式
 		Factory fac = new ManFactory();
 		HuMan huMan = fac.creatMan();
 		huMan.distory();
