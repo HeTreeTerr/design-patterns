@@ -39,7 +39,8 @@ com.hss.singletonMode
 * ThreadLocal单例
 
 ## 6 建造者模式
-com.hss.strategyMode
+com.hss.builderMode  
+* 链式编程
 
 ## 7 责任链模式
 com.hss.chainOfResponsibilityMode

@@ -1,5 +1,7 @@
 package com.hss.builderMode.bean;
 
+import com.hss.builderMode.bulider.ChainOrderBuilder;
+
 /**
  * 订单
  */
@@ -10,6 +12,15 @@ public class Order {
     private String orderNo;
 
     private String name;
+
+    public Order() {
+    }
+
+    public Order(ChainOrderBuilder builder) {
+        this.id = builder.getId();
+        this.orderNo = builder.getOrderNo();
+        this.name = builder.getName();
+    }
 
     public Long getId() {
         return id;
