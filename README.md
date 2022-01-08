@@ -1,6 +1,6 @@
 # sjms(设计模式学习)
 ## 1 策略模式
-com.hss.strategyMode
+com.hss.strategyMode  
 策略模式（Strategy Pattern）是指定义了算法家族、分别封 装起来，让它们之间可以互相替换，此模式
 让算法的变化不会影响到使用算法的用户。 
 可以避免多重分支的if...else...和switch语句  
@@ -78,3 +78,8 @@ com.hss.templateMode
 多个步骤提供实现。  
 模板方法使得子类可以在不改变算法结构的情况下，重新定义算法的某些步骤。   
 属于行为性设计模式。  
+
+## 12 适配器模式
+com.hss.adapterMode  
+适配器模式（Adapter Pattern）是指将一个类的接口转换成客户期望的另一个接口，使 原本的接口不兼容的类可以
+一起工作，属于结构型设计模式。
