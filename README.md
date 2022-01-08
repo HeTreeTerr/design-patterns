@@ -1,6 +1,9 @@
 # sjms(设计模式学习)
 ## 1 策略模式
 com.hss.strategyMode
+策略模式（Strategy Pattern）是指定义了算法家族、分别封 装起来，让它们之间可以互相替换，此模式
+让算法的变化不会影响到使用算法的用户。 
+可以避免多重分支的if...else...和switch语句  
 
 ## 2 观察者模式
 com.hss.catcherMode
