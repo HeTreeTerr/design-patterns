@@ -1,4 +1,4 @@
-package com.hss.adapterMode.service;
+package com.hss.adapterMode.transformer.service;
 
 /**
  * 输出220V

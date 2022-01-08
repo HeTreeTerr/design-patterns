@@ -1,7 +1,7 @@
-package com.hss.adapterMode.adapter;
+package com.hss.adapterMode.transformer.adapter;
 
-import com.hss.adapterMode.service.Dc5;
-import com.hss.adapterMode.service.impl.Ac220Impl;
+import com.hss.adapterMode.transformer.service.Dc5;
+import com.hss.adapterMode.transformer.service.impl.Ac220Impl;
 
 public class Dc5Adapter extends Ac220Impl implements Dc5 {
 

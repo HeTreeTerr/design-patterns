@@ -1,9 +1,9 @@
-package com.hss.adapterMode.test;
+package com.hss.adapterMode.transformer.test;
 
-import com.hss.adapterMode.adapter.Dc5Adapter;
-import com.hss.adapterMode.service.Ac220;
-import com.hss.adapterMode.service.Dc5;
-import com.hss.adapterMode.service.impl.Ac220Impl;
+import com.hss.adapterMode.transformer.adapter.Dc5Adapter;
+import com.hss.adapterMode.transformer.service.Ac220;
+import com.hss.adapterMode.transformer.service.Dc5;
+import com.hss.adapterMode.transformer.service.impl.Ac220Impl;
 
 /**
  * 适配器测试类

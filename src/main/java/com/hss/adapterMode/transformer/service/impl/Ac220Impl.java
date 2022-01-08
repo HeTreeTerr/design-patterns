@@ -1,6 +1,6 @@
-package com.hss.adapterMode.service.impl;
+package com.hss.adapterMode.transformer.service.impl;
 
-import com.hss.adapterMode.service.Ac220;
+import com.hss.adapterMode.transformer.service.Ac220;
 
 public class Ac220Impl implements Ac220 {
 
