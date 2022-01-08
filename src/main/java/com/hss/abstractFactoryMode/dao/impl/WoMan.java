@@ -1,4 +1,4 @@
-package com.hss.abstractFactoryMode.bean;
+package com.hss.abstractFactoryMode.dao.impl;
 
 import com.hss.abstractFactoryMode.dao.HuMan;
 

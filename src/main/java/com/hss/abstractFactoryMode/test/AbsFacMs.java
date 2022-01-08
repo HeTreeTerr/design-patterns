@@ -1,12 +1,12 @@
 package com.hss.abstractFactoryMode.test;
 
-import com.hss.abstractFactoryMode.bean.Man;
-import com.hss.abstractFactoryMode.bean.WoMan;
-import com.hss.abstractFactoryMode.dao.Factory;
 import com.hss.abstractFactoryMode.dao.HuMan;
-import com.hss.abstractFactoryMode.impl.HuManFactory;
-import com.hss.abstractFactoryMode.impl.ManFactory;
-import com.hss.abstractFactoryMode.impl.WoManFactory;
+import com.hss.abstractFactoryMode.factory.AbsCourseFactory;
+import com.hss.abstractFactoryMode.factory.Factory;
+import com.hss.abstractFactoryMode.factory.impl.JavaCourseFactory;
+import com.hss.abstractFactoryMode.factory.impl.ManFactory;
+import com.hss.abstractFactoryMode.factory.impl.PythonCourseFactory;
+import com.hss.abstractFactoryMode.factory.impl.WoManFactory;
 
 /**
  * 
@@ -28,12 +28,21 @@ public class AbsFacMs {
 
 
 //		工厂方法模式
-		Factory fac = new ManFactory();
+		/*Factory fac = new ManFactory();
 		HuMan huMan = fac.creatMan();
 		huMan.distory();
 		
 		Factory fac1 = new WoManFactory();
 		HuMan huWoMan = fac1.creatMan();
-		huWoMan.distory();
+		huWoMan.distory();*/
+
+//		抽象工厂模式
+		AbsCourseFactory javaCourseFactory = new JavaCourseFactory();
+		javaCourseFactory.createVideo().describe();
+		javaCourseFactory.createNotes().describe();
+
+		AbsCourseFactory pythonCourseFactory = new PythonCourseFactory();
+		pythonCourseFactory.createVideo().describe();
+		pythonCourseFactory.createNotes().describe();
 	}
 }

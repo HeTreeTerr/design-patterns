@@ -1,7 +1,7 @@
-package com.hss.abstractFactoryMode.impl;
+package com.hss.abstractFactoryMode.factory.impl;
 
-import com.hss.abstractFactoryMode.bean.Man;
-import com.hss.abstractFactoryMode.bean.WoMan;
+import com.hss.abstractFactoryMode.dao.impl.Man;
+import com.hss.abstractFactoryMode.dao.impl.WoMan;
 import com.hss.abstractFactoryMode.dao.HuMan;
 
 /**
