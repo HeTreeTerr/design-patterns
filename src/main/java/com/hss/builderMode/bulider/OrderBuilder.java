@@ -1,6 +1,6 @@
-package com.hss.builderModer.bulider;
+package com.hss.builderMode.bulider;
 
-import com.hss.builderModer.bean.Order;
+import com.hss.builderMode.bean.Order;
 
 /**
  * 订单构造器

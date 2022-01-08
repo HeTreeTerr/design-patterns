@@ -52,4 +52,9 @@ com.hss.proxyMode
 * jdk动态代理
 * cglib
 
+## 1.10 委派模式
+com.hss.delegateMode  
+委派模式（Delegate Pattern）的基本作用就是负责任务的调 度和分配任务，跟代理模式很像，可以看做是一种特殊情况下 的静态代理的全权代理，但是代理模式注重过程，而委派模式 注重结果。 
+不属于GOF 23种设计模式之一。   
+属于行为型模式。  
 todo...

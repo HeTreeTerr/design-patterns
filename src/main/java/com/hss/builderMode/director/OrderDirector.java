@@ -1,7 +1,7 @@
-package com.hss.builderModer.director;
+package com.hss.builderMode.director;
 
-import com.hss.builderModer.bean.Order;
-import com.hss.builderModer.bulider.OrderBuilder;
+import com.hss.builderMode.bean.Order;
+import com.hss.builderMode.bulider.OrderBuilder;
 
 /**
  * 导演

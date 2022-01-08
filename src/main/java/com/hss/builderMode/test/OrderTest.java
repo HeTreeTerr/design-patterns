@@ -1,7 +1,7 @@
-package com.hss.builderModer.test;
+package com.hss.builderMode.test;
 
-import com.hss.builderModer.bulider.OrderConcreteBuilder;
-import com.hss.builderModer.director.OrderDirector;
+import com.hss.builderMode.bulider.OrderConcreteBuilder;
+import com.hss.builderMode.director.OrderDirector;
 
 /**
  * 建造者测试

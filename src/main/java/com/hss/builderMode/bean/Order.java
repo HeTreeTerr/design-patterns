@@ -1,4 +1,4 @@
-package com.hss.builderModer.bean;
+package com.hss.builderMode.bean;
 
 /**
  * 订单
