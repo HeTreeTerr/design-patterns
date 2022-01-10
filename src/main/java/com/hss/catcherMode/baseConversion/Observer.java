@@ -1,6 +1,5 @@
-package com.hss.catcherMode.dao;
+package com.hss.catcherMode.baseConversion;
 
-import com.hss.catcherMode.bean.Subject;
 
 public abstract class Observer {
 	

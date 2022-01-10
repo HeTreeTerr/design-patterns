@@ -1,4 +1,4 @@
-package com.hss.catcherMode.dao;
+package com.hss.catcherMode.weather;
 
 public interface Subject1 {
 	//注册观察者

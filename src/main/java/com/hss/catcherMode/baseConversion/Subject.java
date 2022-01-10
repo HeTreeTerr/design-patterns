@@ -1,9 +1,7 @@
-package com.hss.catcherMode.bean;
+package com.hss.catcherMode.baseConversion;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.hss.catcherMode.dao.Observer;
 
 public class Subject {
 	//Subject与Observer的继承对象一对多关系

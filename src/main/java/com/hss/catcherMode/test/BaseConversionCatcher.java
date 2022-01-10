@@ -1,9 +1,9 @@
 package com.hss.catcherMode.test;
 
-import com.hss.catcherMode.bean.Subject;
-import com.hss.catcherMode.impl.BinaryObserver;
-import com.hss.catcherMode.impl.HexaObserver;
-import com.hss.catcherMode.impl.OctalObserver;
+import com.hss.catcherMode.baseConversion.Subject;
+import com.hss.catcherMode.baseConversion.BinaryObserver;
+import com.hss.catcherMode.baseConversion.HexaObserver;
+import com.hss.catcherMode.baseConversion.OctalObserver;
 
 /**
  * 
@@ -14,7 +14,7 @@ import com.hss.catcherMode.impl.OctalObserver;
  * 
  * 意图：定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知，而自动更新
  */
-public class Catcher {
+public class BaseConversionCatcher {
 	public static void main(String[] args) {
 		Subject subject = new Subject();
 		//16进制

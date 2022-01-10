@@ -1,15 +1,14 @@
-package com.hss.catcherMode.impl;
+package com.hss.catcherMode.weather;
 
-import com.hss.catcherMode.dao.Observer1;
+import com.hss.catcherMode.weather.Observer1;
 
 /**
  * 
  * @author lenovo
- * 观察者2
- *
+ *	观察者1：
  */
-public class ForcastConditions implements Observer1{
-	
+public class CurrentConditions implements Observer1{
+
 	private float mTemperatrue;
 	private float mPressure;
 	private float mHumidity;
@@ -21,11 +20,11 @@ public class ForcastConditions implements Observer1{
 		this.mHumidity = mHumidity;
 		display();
 	}
-	
 	//显示
 	public void display(){
-		System.out.println("**Tomorrow mTemperatrue:"+mTemperatrue+"**");
-		System.out.println("**Tomorrow mPressure:"+mPressure+"**");
-		System.out.println("**Tomorrow mHumidity:"+mHumidity+"**");
+		System.out.println("**Today mTemperatrue:"+mTemperatrue+"**");
+		System.out.println("**Today mPressure:"+mPressure+"**");
+		System.out.println("**Today mHumidity:"+mHumidity+"**");
 	}
+
 }

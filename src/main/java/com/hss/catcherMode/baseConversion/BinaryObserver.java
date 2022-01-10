@@ -1,7 +1,7 @@
-package com.hss.catcherMode.impl;
+package com.hss.catcherMode.baseConversion;
 
-import com.hss.catcherMode.bean.Subject;
-import com.hss.catcherMode.dao.Observer;
+import com.hss.catcherMode.baseConversion.Subject;
+import com.hss.catcherMode.baseConversion.Observer;
 
 public class BinaryObserver extends Observer{
 

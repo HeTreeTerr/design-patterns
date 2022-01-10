@@ -1,9 +1,9 @@
-package com.hss.catcherMode.impl;
+package com.hss.catcherMode.weather;
 
 import java.util.ArrayList;
 
-import com.hss.catcherMode.dao.Observer1;
-import com.hss.catcherMode.dao.Subject1;
+import com.hss.catcherMode.weather.Observer1;
+import com.hss.catcherMode.weather.Subject1;
 
 public class WeatherDateSt implements Subject1{
 	
