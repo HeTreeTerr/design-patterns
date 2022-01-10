@@ -5,7 +5,7 @@ import com.hss.decoratorMode.bean.Drink;
 /**
  * 
  * @author lenovo
- * 咖啡的佐料
+ * 给饮品加佐料
  *
  */
 public class Decorator extends Drink {

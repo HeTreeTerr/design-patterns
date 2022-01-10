@@ -21,11 +21,14 @@ com.hss.abstractFactoryMode
 
 ### 3.3 抽象工厂模式
 抽象工厂模式（Abastract Factory Pattern）是指提供一个创建一系列相关或相互依赖对象的接口，无须
-指定他们具体的类。
+指定他们具体的类。  
 属于创建型设计模式。
 
 ## 4 装饰者模式
-com.hss.decoratorMode
+com.hss.decoratorMode  
+装饰者模式（Decorator Pattern）是指在不改变原有对象的 基础之上，将功能附加到对象上，提供了比继承
+更有弹性的替代方案（扩展原有对象的功能）。  
+属于结构型模式。
 
 ## 5 单例模式
 com.hss.singletonMode  

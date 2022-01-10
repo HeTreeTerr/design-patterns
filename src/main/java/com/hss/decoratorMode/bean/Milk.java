@@ -1,5 +1,8 @@
 package com.hss.decoratorMode.bean;
 
+/**
+ * 加了牛奶的饮品
+ */
 public class Milk extends Decorator {
 
 	public Milk(Drink obj) {

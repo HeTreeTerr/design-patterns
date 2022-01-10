@@ -24,19 +24,25 @@ import com.hss.decoratorMode.bean.Milk;
  */
 public class Jewelry {
 	public static void main(String[] args) {
-		Drink order;
+
+		System.out.println("\n=======单点一杯咖啡======");
 		//点一杯咖啡
-		order = new Decaf();
-		
-		System.out.println("decaf cost:"+order.cost());
-		System.out.println("decaf Description:"+order.getDescription());
-		System.out.println("----------------------------------");
-		order = new Espresso();
-		order = new Milk(order);
-		order = new Milk(order);
-		order = new Chocolate(order);
-		System.out.println("cost:"+order.cost());
-		System.out.println("Description:"+order.getDescription());
+		Drink order1 = new Decaf();
+
+		System.out.println("decaf cost:" + order1.cost());
+		System.out.println("decaf Description:" + order1.getDescription());
+
+		System.out.println("\n=======一杯咖啡，加佐料======");
+		//点一杯咖啡
+		Drink order2 = new Espresso();
+		//加一份牛奶
+		order2 = new Milk(order2);
+		//加一份牛奶
+		order2 = new Milk(order2);
+		//加一份巧克力
+		order2 = new Chocolate(order2);
+		System.out.println("cost:"+order2.cost());
+		System.out.println("Description:"+order2.getDescription());
 		
 		
 	}

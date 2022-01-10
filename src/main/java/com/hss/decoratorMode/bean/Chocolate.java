@@ -3,7 +3,7 @@ package com.hss.decoratorMode.bean;
 /**
  * 
  * @author lenovo
- * 巧克力
+ * 加一份巧克力的饮品
  *
  */
 public class Chocolate extends Decorator {
