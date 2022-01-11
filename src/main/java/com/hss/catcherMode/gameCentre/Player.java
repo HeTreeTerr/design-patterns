@@ -4,7 +4,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
- * 玩家
+ * 玩家（观察者）
  */
 public class Player implements Observer {
 

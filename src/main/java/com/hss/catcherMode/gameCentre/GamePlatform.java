@@ -3,7 +3,7 @@ package com.hss.catcherMode.gameCentre;
 import java.util.Observable;
 
 /**
- * 游戏平台
+ * 游戏平台（被观察者）
  */
 public class GamePlatform extends Observable {
 
