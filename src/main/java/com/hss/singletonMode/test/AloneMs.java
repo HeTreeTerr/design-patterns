@@ -20,9 +20,12 @@ import java.lang.reflect.InvocationTargetException;
  *
  */
 public class AloneMs {
+
+	private final static Object o = new Object();
 	
 	public static void main(String[] args) {
-//		饿汉模式，在启动时就创建实例，暂无测试代码
+//		饿汉模式，在启动时就创建实例
+//		AloneMs.o.toString();
 
 //		经典懒汉单例模式代码实例
 //		alOneSingleton();

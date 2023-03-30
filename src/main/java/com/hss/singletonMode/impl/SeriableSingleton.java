@@ -21,7 +21,7 @@ public class SeriableSingleton implements Serializable {
      * 重新readResolve方法
      * 覆盖反序列化出来的对象
      * 对象还是创建了两次，在jvm层面，相对来说比较安全
-     * 之前反序列化出来的对象挥别GC回收
+     * 之前反序列化出来的对象会被GC回收
      * @return
      */
     private Object readResolve(){

@@ -102,7 +102,7 @@ public class FatherClass implements Serializable,Cloneable{
         childClass.setObjAge(50);
         fatherClass.setChildClass(childClass);
 
-        /**
+        /*
          * 深拷贝：序列化
          */
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

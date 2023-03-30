@@ -1,12 +1,11 @@
 package com.hss.abstractFactoryMode.test;
 
 import com.hss.abstractFactoryMode.dao.HuMan;
+import com.hss.abstractFactoryMode.dao.impl.Man;
+import com.hss.abstractFactoryMode.dao.impl.WoMan;
 import com.hss.abstractFactoryMode.factory.AbsCourseFactory;
 import com.hss.abstractFactoryMode.factory.Factory;
-import com.hss.abstractFactoryMode.factory.impl.JavaCourseFactory;
-import com.hss.abstractFactoryMode.factory.impl.ManFactory;
-import com.hss.abstractFactoryMode.factory.impl.PythonCourseFactory;
-import com.hss.abstractFactoryMode.factory.impl.WoManFactory;
+import com.hss.abstractFactoryMode.factory.impl.*;
 
 /**
  * 
