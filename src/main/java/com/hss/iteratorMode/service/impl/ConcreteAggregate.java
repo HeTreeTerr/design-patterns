@@ -28,6 +28,11 @@ public class ConcreteAggregate implements Aggregate {
     }
 
     @Override
+    public ArrayList getList() {
+        return arrayList;
+    }
+
+    @Override
     public Iterator iterator() {
         return new ConcreteIterator(this.arrayList);
     }

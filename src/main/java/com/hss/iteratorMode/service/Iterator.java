@@ -25,4 +25,9 @@ public interface Iterator<E> {
      * @return
      */
     E currentItem();
+
+    /**
+     * 移除元素
+     */
+    void remove();
 }

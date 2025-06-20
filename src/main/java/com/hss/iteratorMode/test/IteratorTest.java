@@ -23,7 +23,11 @@ public class IteratorTest {
 
         Iterator iterator = aggregate.iterator();
         while (iterator.hasNext()){
-            System.out.println(iterator.currentItem());
+            String item = (String) iterator.currentItem();
+            if("l4".equals(item)){
+                iterator.remove();
+            }
         }
+        System.out.println(aggregate.getList());
     }
 }
